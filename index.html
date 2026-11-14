@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domaine de l'Aubrée (démonstration)</title>
+<meta name="description" content="Site de démonstration d'un domaine viticole fictif : vins, terroir, visites et boutique en ligne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap"></noscript>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2716%27 fill=%27%236B1E2B%27/%3E%3Ctext x=%2716%27 y=%2722%27 text-anchor=%27middle%27 font-family=%27Georgia%27 font-size=%2718%27 fill=%27%23F7F3EC%27%3EA%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/site.css">
+<script>
+/* précharge l'image principale de la page demandée, avant le rendu */
+(function(){var h=location.hash.slice(1),k={'':'hero',domaine:'arbre',vins:'automne',visites:'terrasses',journal:'rangs'}[h];
+var w=innerWidth<=700?800:1400;if(k){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='img/'+k+'-'+w+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();
+</script>
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<div class="topbar" role="region" aria-label="Information">Site de démonstration : <b>domaine fictif</b>, aucune commande ni réservation n'est réellement envoyée.</div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap in">
+    <nav aria-label="Navigation principale">
+      <a href="#domaine" data-nav="domaine">Le domaine</a><a href="#vins" data-nav="vins">Nos vins</a><a href="#visites" data-nav="visites">Visites</a>
+    </nav>
+    <button class="ic burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    <a class="logo" href="#"><small>Domaine de</small><span>L'Aubrée</span></a>
+    <div class="tools">
+      <nav aria-label="Navigation secondaire"><a href="#journal" data-nav="journal">Journal</a><a href="#contact" data-nav="contact">Contact</a></nav>
+      <button class="ic hide-s" aria-label="Rechercher" data-toast="La recherche n'est pas active sur la démonstration."><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
+      <button class="ic hide-s" aria-label="Mon compte" data-toast="L'espace client n'est pas actif sur la démonstration."><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.4-3.6 4.2-5.4 7.5-5.4s6.1 1.8 7.5 5.4"/></svg></button>
+      <button class="ic" id="cartBtn"><span class="sr">Panier, articles :</span><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 016 0V8"/></svg><span class="count" id="count">0</span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mmenu" id="mmenu" aria-label="Menu mobile" inert>
+  <a href="#" data-nav="">Accueil</a><a href="#domaine" data-nav="domaine">Le domaine</a><a href="#vins" data-nav="vins">Nos vins</a><a href="#visites" data-nav="visites">Visites</a><a href="#journal" data-nav="journal">Journal</a><a href="#contact" data-nav="contact">Contact</a>
+</nav>
+
+<main id="view" tabindex="-1"></main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="logo" href="#"><small>Domaine de</small><span>L'Aubrée</span></a><p>Domaine fictif créé pour une démonstration de site. Les noms, chiffres, vins et prix sont inventés.</p></div>
+      <div><h2>Boutique</h2><ul><li><a href="#vins">Tous nos vins</a></li><li><a href="#vin-pierre-levee">Pierre Levée</a></li><li><a href="#vin-arbre-seul">L'Arbre Seul</a></li><li><a href="#cgv">Livraison et CGV</a></li></ul></div>
+      <div><h2>Le domaine</h2><ul><li><a href="#domaine">Notre histoire</a></li><li><a href="#visites">Visites</a></li><li><a href="#journal">Journal</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h2>Informations</h2><ul><li><a href="#mentions">Mentions légales</a></li><li><a href="#cgv">Conditions générales de vente</a></li><li><a href="#cookies">Cookies</a></li><li><button type="button" data-cookies style="border:0;background:none;padding:0;font:inherit;font-size:14px">Gérer mes cookies</button></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Domaine de l'Aubrée (démonstration) · Photos : domaine public et CC0</span>
+      <span>La vente d'alcool aux mineurs est interdite.</span>
+    </div>
+    <p class="evin">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Panier" inert>
+  <header><h2>Votre panier</h2><button class="x" type="button" data-close aria-label="Fermer le panier"><svg viewBox="0 0 16 16"><path d="M3 3l10 10M13 3L3 13"/></svg></button></header>
+  <div class="ship" id="ship"></div>
+  <div class="items" id="items"></div>
+  <footer><div class="tot"><span>Total</span><span id="total">0,00 €</span></div><button class="btn" type="button" data-toast="Paiement désactivé : ceci est un site de démonstration.">Passer commande</button><small>Paiement désactivé sur ce site de démonstration.</small></footer>
+</aside>
+
+<div class="modal" id="book" role="dialog" aria-modal="true" aria-labelledby="bookTitle" inert>
+  <div class="card">
+    <div class="top"><div><span class="eyebrow">Réservation</span><h2 id="bookTitle" style="margin-top:12px">Réserver une visite</h2></div><button class="x" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 16 16"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
+    <form id="bookForm">
+      <div class="field"><label for="bOffer">Formule</label><select id="bOffer"><option>Découverte</option><option>Balade dans les vignes</option><option>Verticale de la cuvée de garde</option></select></div>
+      <div class="row2">
+        <div class="field"><label for="bDate">Date</label><input id="bDate" type="date" required></div>
+        <div class="field"><label for="bPeople">Personnes</label><select id="bPeople"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+      </div>
+      <div class="field"><label for="bName">Nom</label><input id="bName" type="text" autocomplete="name" required></div>
+      <button class="btn" type="submit" style="width:100%;justify-content:center">Envoyer la demande</button>
+      <p class="done" id="bookDone" role="status">Demande enregistrée. Sur un vrai site, le domaine recevrait un e-mail et vous confirmerait le créneau. Ici, rien n'est envoyé : c'est une démonstration.</p>
+    </form>
+  </div>
+</div>
+
+<div class="age" id="age" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+  <div class="card">
+    <span class="logo"><small>Domaine de</small><span>L'Aubrée</span></span>
+    <h2 id="ageTitle">Avez-vous l'âge légal pour consommer de l'alcool ?</h2>
+    <p>Ce site présente des vins. Son accès est réservé aux personnes majeures.</p>
+    <div class="btns"><button class="btn" type="button" id="ageYes">Oui, j'ai 18 ans ou plus</button><button class="btn ghost" type="button" id="ageNo">Non</button></div>
+    <small id="ageMsg">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</small>
+  </div>
+</div>
+
+<section class="cookies" id="cookies" aria-label="Cookies">
+  <h2>Vos préférences</h2>
+  <p>Nous utilisons des cookies nécessaires au panier, et, avec votre accord, des cookies de mesure d'audience. <a href="#cookies">En savoir plus</a></p>
+  <div class="opts">
+    <label>Nécessaires (panier, contrôle d'âge) <input type="checkbox" checked disabled></label>
+    <label for="ckStats">Mesure d'audience <input type="checkbox" id="ckStats"></label>
+    <button class="btn" type="button" id="ckSave" style="justify-content:center">Enregistrer mes choix</button>
+  </div>
+  <div class="btns"><button class="btn ghost" type="button" id="ckNo">Tout refuser</button><button class="btn" type="button" id="ckYes">Tout accepter</button></div>
+  <button class="lnk" type="button" id="ckMore">Personnaliser</button>
+</section>
+
+<div class="toast" id="toast" role="status"></div>
+
+</body>
+</html>
