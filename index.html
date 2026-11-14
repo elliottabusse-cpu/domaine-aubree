@@ -15,6 +15,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2716%27 fill=%27%236B1E2B%27/%3E%3Ctext x=%2716%27 y=%2722%27 text-anchor=%27middle%27 font-family=%27Georgia%27 font-size=%2718%27 fill=%27%23F7F3EC%27%3EA%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/site.css">
 <script>
+/* masque les titres tant que les polices ne sont pas prêtes (au plus 2,5 s), pour éviter qu'ils se recomposent */
+(function(){var d=document.documentElement;d.classList.add('wf');function ok(){d.classList.remove('wf');}
+if(document.fonts&&document.fonts.load){Promise.all([document.fonts.load('300 40px Fraunces'),document.fonts.load('italic 300 40px Fraunces'),document.fonts.load('400 16px "Instrument Sans"')]).then(ok,ok);}else ok();setTimeout(ok,2500);})();
+</script>
+<script>
 /* précharge l'image principale de la page demandée, avant le rendu */
 (function(){var h=location.hash.slice(1),k={'':'hero',domaine:'arbre',vins:'automne',visites:'terrasses',journal:'rangs'}[h];
 var w=innerWidth<=700?800:1400;if(k){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='img/'+k+'-'+w+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();

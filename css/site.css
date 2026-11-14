@@ -532,3 +532,5 @@ h1,h2,h3,h4,p{margin:0}
 .modal:not(.on){visibility:hidden}
 .mmenu:not(.on){visibility:hidden;transition:transform .6s var(--ease),visibility 0s .6s}
 .rail:focus-visible{outline-offset:-3px}
+
+.wf .pbanner .wrap,.wf .hero .content,.wf .hdr .logo,.wf .pp h1,.wf .contact h1,.wf .legal-page h1{visibility:hidden}
