@@ -127,7 +127,7 @@ V.domaine = function(){
   [['1952','Les premières vignes','Trois hectares plantés au-dessus du village.'],['1987','Première mise en bouteille','La famille quitte la coopérative et vinifie au domaine.'],['2004','Le nouveau chai','Un chai enterré pour garder la fraîcheur sans climatisation.'],['2015','Fin des herbicides','Les sols sont travaillés et enherbés.'],['2022','Une nouvelle génération','Claire et Antoine reprennent le domaine.']].map(function(t){return '<div class="rv"><b>'+t[0]+'</b><h3>'+t[1]+'</h3><p>'+t[2]+'</p></div>';}).join('')+
   '</div></div></section>'+
 
-  '<section class="sec alt"><div class="wrap"><span class="eyebrow rv">Notre façon de travailler</span><h2 class="h2 rv" style="margin-top:20px;max-width:18ch">Peu de règles, <em>mais tenues.</em></h2>'+
+  '<section class="sec alt"><div class="wrap"><span class="eyebrow rv">Notre façon de travailler</span><h2 class="h2 rv" style="margin-top:20px;max-width:9.0em">Peu de règles, <em>mais tenues.</em></h2>'+
   '<div class="vals">'+[['i.','Le sol avant tout','Pas d’herbicides, un rang sur deux enherbé, des engrais verts semés chaque automne.'],['ii.','Tout à la main','Taille, ébourgeonnage et vendanges manuelles, en petites caisses de 15 kg.'],['iii.','Intervenir peu','Levures indigènes, peu de soufre, pas de filtration pour les rouges.']].map(function(v){return '<div class="rv"><span class="n">'+v[0]+'</span><h3>'+v[1]+'</h3><p>'+v[2]+'</p></div>';}).join('')+'</div></div></section>'+
 
   '<section class="sec"><div class="wrap split rev"><div class="prose">'+
@@ -194,7 +194,7 @@ V.journal = function(){
 V.article = function(id){
   var p = D.posts.filter(function(x){return x.id===id;})[0]; if(!p) return V.nf();
   var rel = D.posts.filter(function(x){return x.id!==p.id;}).slice(0,3);
-  return banner(p.img, p.cat+' · '+p.date, p.title, '', '<a href="#journal">Journal</a><span>/</span><span>'+p.cat+'</span>').replace('<h1>','<h1 style="max-width:20ch;font-size:clamp(38px,5vw,76px)">')+
+  return banner(p.img, p.cat+' · '+p.date, p.title, '', '<a href="#journal">Journal</a><span>/</span><span>'+p.cat+'</span>').replace('<h1>','<h1 style="max-width:10.0em;font-size:clamp(38px,5vw,76px)">')+
   '<section class="sec"><div class="wrap"><article class="art"><p class="lede">'+p.lede+'</p>'+
   '<p>'+p.body[0]+'</p><p>'+p.body[1]+'</p>'+
   '<figure><div class="ph">'+pic(p.fig,p.figcap,'(max-width:1100px) 100vw, 1040px')+'</div><figcaption>'+p.figcap+'</figcaption></figure>'+
