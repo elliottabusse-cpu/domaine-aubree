@@ -401,5 +401,7 @@ function onScroll(){
 addEventListener('scroll', function(){if(!ticking){requestAnimationFrame(onScroll);ticking=true;}}, {passive:true});
 
 renderCart();
-route();
+/* attend les polices (au plus 800 ms) pour éviter que les titres se recomposent */
+var started=false;function start(){if(!started){started=true;route();}}
+if(document.fonts&&document.fonts.load){Promise.all([document.fonts.load('300 40px Fraunces'),document.fonts.load('italic 300 40px Fraunces'),document.fonts.load('400 16px "Instrument Sans"')]).then(start,start);setTimeout(start,800);}else start();
 })();
