@@ -16,8 +16,8 @@
 <link rel="stylesheet" href="css/site.css">
 <script>
 /* précharge l'image principale de la page demandée, avant le rendu */
-(function(){var h=location.hash.slice(1),k={'':'hero',domaine:'arbre',vins:'automne',visites:'terrasses',journal:'rangs'}[h];
-var w=innerWidth<=700?800:1400;if(k){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='img/'+k+'-'+w+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();
+(function(){var h=location.hash.slice(1),k={'':'hero',domaine:'arbre',vins:'automne',visites:'terrasses',journal:'rangs','article-apres-vendanges':'rangs','article-futs':'voute','article-murets':'coteau','article-vendanges-2026':'cueillette','article-sol-vivant':'village','article-taille':'hiver'}[h];
+var w=innerWidth<=700?800:(['voute'].indexOf(k)>-1?1000:1400);if(k){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='img/'+k+'-'+w+'.webp';l.fetchPriority='high';document.head.appendChild(l);}})();
 </script>
 <script src="js/data.js" defer></script>
 <script src="js/app.js" defer></script>
