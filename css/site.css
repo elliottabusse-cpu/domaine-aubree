@@ -1,8 +1,11 @@
+/* Polices de secours aux mêmes dimensions que les polices du site : le texte ne bouge pas quand elles arrivent */
+@font-face{font-family:'Fraunces Fallback';src:local('Times New Roman'),local('TimesNewRomanPSMT'),local('Liberation Serif');size-adjust:87.6%;ascent-override:111.6%;descent-override:29.1%;line-gap-override:0%}
+@font-face{font-family:'Instrument Fallback';src:local('Arial'),local('ArialMT'),local('Liberation Sans');size-adjust:101.9%;ascent-override:95.2%;descent-override:24.5%;line-gap-override:0%}
 
 :root{
   --paper:#F7F3EC;--paper2:#EFE8DC;--stone:#E4DACB;--ink:#1D1915;--ink2:#4A423A;--mut:#6E655B;
   --wine:#6B1E2B;--wine2:#8A2B3B;--sage:#6F7D62;--line:rgba(29,25,21,.14);
-  --serif:'Fraunces',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;
+  --serif:'Fraunces','Fraunces Fallback',Georgia,serif;--sans:'Instrument Sans','Instrument Fallback',system-ui,sans-serif;
   --ease:cubic-bezier(.2,.7,.1,1);
 }
 *{box-sizing:border-box}
@@ -533,4 +536,3 @@ h1,h2,h3,h4,p{margin:0}
 .mmenu:not(.on){visibility:hidden;transition:transform .6s var(--ease),visibility 0s .6s}
 .rail:focus-visible{outline-offset:-3px}
 
-.wf .pbanner .wrap,.wf .hero .content,.wf .hdr .logo,.wf .pp h1,.wf .contact h1,.wf .legal-page h1{visibility:hidden}
